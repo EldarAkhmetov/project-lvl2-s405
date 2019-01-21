@@ -1,0 +1,25 @@
+{
+  "name": "s405gendiff",
+  "version": "1.0.0",
+  "description": "Вычислитель отличий",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EldarAkhmetov/project-lvl2-s405.git"
+  },
+  "author": "Eldar Akhmetov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EldarAkhmetov/project-lvl2-s405/issues"
+  },
+  "homepage": "https://github.com/EldarAkhmetov/project-lvl2-s405#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3"
+  }
+}
