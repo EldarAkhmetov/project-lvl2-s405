@@ -1,6 +1,6 @@
 {
   "name": "s405gendiff",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "Вычислитель отличий",
   "main": "index.js",
   "scripts": {
