@@ -1,23 +1,26 @@
 import _ from 'lodash';
 import fs from 'fs';
+import path from 'path';
+import parse from './parsers';
 
 const genDiff = (path1, path2) => {
-  const data1 = JSON.parse(fs.readFileSync(path1));
-  const data2 = JSON.parse(fs.readFileSync(path2));
+  const data1 = parse(path.extname(path1), fs.readFileSync(path1));
+  const data2 = parse(path.extname(path2), fs.readFileSync(path2));
   const keys1 = Object.keys(data1);
   const keys2 = Object.keys(data2);
-
-  const firstStep = keys1.reduce((acc, key) => {
-    if (_.has(data2, key)) {
-      return data1[key] === data2[key]
-        ? { ...acc, [`  ${key}`]: data1[key] } : { ...acc, [`+ ${key}`]: data2[key], [`- ${key}`]: data1[key] };
+  const unitedKeys = _.union(keys1, keys2);
+  const result = unitedKeys.map((key) => {
+    if (data1[key] === data2[key]) {
+      return `    ${key}: ${data1[key]}`;
     }
-    return { ...acc, [`- ${key}`]: data1[key] };
-  }, {});
-
-  const secondStep = keys2.reduce((acc, key) => (_.has(data1, key)
-    ? acc : { ...acc, [`+ ${key}`]: data2[key] }), firstStep);
-  return JSON.stringify(secondStep);
+    if (_.has(data1, key)) {
+      return _.has(data2, key)
+        ? `  + ${key}: ${data2[key]}\n  - ${key}: ${data1[key]}`
+        : `  - ${key}: ${data1[key]}`;
+    }
+    return `  + ${key}: ${data2[key]}`;
+  });
+  return `{\n${result.join('\n')}\n}`;
 };
 
 export default genDiff;
