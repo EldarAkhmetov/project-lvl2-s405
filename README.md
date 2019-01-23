@@ -3,5 +3,5 @@
 [![Build Status](https://travis-ci.org/EldarAkhmetov/project-lvl2-s405.svg?branch=master)](https://travis-ci.org/EldarAkhmetov/project-lvl2-s405)
 <a href="https://asciinema.org/a/fKH4eSfOqZMhMbIJaPQ6O19BM" target="_blank"><img src="https://asciinema.org/a/fKH4eSfOqZMhMbIJaPQ6O19BM.svg" /></a>
 
-# Вычисление отличий у файлов *.JSON и *.YML
-<a href="https://asciinema.org/a/ytDZlGMt0LgB4ClFZks7qwnFu" target="_blank"><img src="https://asciinema.org/a/ytDZlGMt0LgB4ClFZks7qwnFu.svg" /></a>
+# Вычисление отличий у файлов *.JSON, *.YML и *.INI
+<a href="https://asciinema.org/a/Q0aH9a2dFu4QK6jTPVqTGcBdz" target="_blank"><img src="https://asciinema.org/a/Q0aH9a2dFu4QK6jTPVqTGcBdz.svg" /></a>
