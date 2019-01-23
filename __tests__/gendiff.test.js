@@ -14,3 +14,9 @@ test('YML', () => {
   const expected = fs.readFileSync(getPath('result'), 'utf8');
   expect(result).toBe(expected);
 });
+
+test('INI', () => {
+  const result = genDiff(getPath('before.ini'), getPath('after.ini'));
+  const expected = fs.readFileSync(getPath('result'), 'utf8');
+  expect(result).toBe(expected);
+});
