@@ -9,5 +9,5 @@ const formatFuncs = {
 
 export default (format, data) => {
   const parse = formatFuncs[format];
-  return parse(data.toString());
+  return parse(data);
 };

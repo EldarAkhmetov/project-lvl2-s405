@@ -8,9 +8,21 @@ test.each([
   [getPath('before.yml'), getPath('after.yml')],
   [getPath('before.ini'), getPath('after.ini')],
 ])(
-  'JSON, YML, INI', (path1, path2) => {
+  'Check flat structures JSON, YML, INI', (path1, path2) => {
     const result = genDiff(path1, path2);
     const expected = fs.readFileSync(getPath('result'), 'utf8');
+    expect(result).toBe(expected);
+  },
+);
+
+test.each([
+  [getPath('astBefore.json'), getPath('astAfter.json')],
+  [getPath('astBefore.yml'), getPath('astAfter.yml')],
+  [getPath('astBefore.ini'), getPath('astAfter.ini')],
+])(
+  'Check nested structures JSON, YML, INI', (path1, path2) => {
+    const result = genDiff(path1, path2);
+    const expected = fs.readFileSync(getPath('astResult'), 'utf8');
     expect(result).toBe(expected);
   },
 );
