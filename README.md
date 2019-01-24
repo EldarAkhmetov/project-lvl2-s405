@@ -5,3 +5,5 @@
 
 # Вычисление отличий у файлов *.JSON, *.YML и *.INI
 <a href="https://asciinema.org/a/Q0aH9a2dFu4QK6jTPVqTGcBdz" target="_blank"><img src="https://asciinema.org/a/Q0aH9a2dFu4QK6jTPVqTGcBdz.svg" /></a>
+# Вычисление отличий у файлов *.JSON, *.YML и *.INI с вложенными структурами
+<a href="https://asciinema.org/a/ajxz5RxkTzNKArhEtEATHuRDR" target="_blank"><img src="https://asciinema.org/a/ajxz5RxkTzNKArhEtEATHuRDR.svg" /></a>
