@@ -8,7 +8,7 @@ program
   .option('-V, --version', 'output the version number')
   .option('-f, --format [type]', 'Output format')
   .arguments('<firstConfig> <secondCoifig>')
-  .action((firstConfig, secondConfig) => {
-    console.log(genDiff(firstConfig, secondConfig));
+  .action((firstConfig, secondConfig, options) => {
+    console.log(genDiff(firstConfig, secondConfig, options.format));
   })
   .parse(process.argv);
