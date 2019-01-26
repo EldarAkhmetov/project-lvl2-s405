@@ -9,3 +9,5 @@
 <a href="https://asciinema.org/a/ajxz5RxkTzNKArhEtEATHuRDR" target="_blank"><img src="https://asciinema.org/a/ajxz5RxkTzNKArhEtEATHuRDR.svg" /></a>
 # Вычисление отличий с выводом результата в плоском формате
 <a href="https://asciinema.org/a/7h2VpFolksPYMbBfWH61ZRO31" target="_blank"><img src="https://asciinema.org/a/7h2VpFolksPYMbBfWH61ZRO31.svg" /></a>
+# Вычисление отличий с выводом результата в формате json
+<a href="https://asciinema.org/a/fVsLBFFFMfIJnLiddiG3wi346" target="_blank"><img src="https://asciinema.org/a/fVsLBFFFMfIJnLiddiG3wi346.svg" /></a>
