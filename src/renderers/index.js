@@ -4,7 +4,7 @@ import plain from './plainRenderer';
 const chooseRenderer = {
   standart,
   plain,
-  json: ast => JSON.stringify(ast),
+  json: JSON.stringify,
 };
 
 export default format => chooseRenderer[format];
