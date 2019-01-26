@@ -8,7 +8,7 @@ const valueRenderer = (value) => {
 const stateActions = {
   new: (element, previousProp) => `Property '${previousProp}${element.key}' was added with value: ${valueRenderer(element.value)}`,
   deleted: (element, previousProp) => `Property '${previousProp}${element.key}' was removed`,
-  nested: (element, previousProp, rendering) => `${rendering(element.children, `${previousProp}${element.key}.`)}`,
+  nested: (element, previousProp, format) => `${format(element.children, `${previousProp}${element.key}.`)}`,
   unchanged: (element, previousProp) => `Property '${previousProp}${element.key}' was unchanged`,
   changed: (element, previousProp) => `Property '${previousProp}${element.key}' was updated. From ${valueRenderer(element.oldValue)} to ${valueRenderer(element.newValue)}`,
 };

@@ -14,7 +14,7 @@ const stringify = (value, spaces) => {
 const stateActions = {
   new: (element, spaces) => `${' '.repeat(spaces - 2)}+ ${element.key}: ${stringify(element.value, spaces)}`,
   deleted: (element, spaces) => `${' '.repeat(spaces - 2)}- ${element.key}: ${stringify(element.value, spaces)}`,
-  nested: (element, spaces, newDepth, rendering) => `${' '.repeat(spaces)}${element.key}: ${rendering(element.children, newDepth)}`,
+  nested: (element, spaces, newDepth, format) => `${' '.repeat(spaces)}${element.key}: ${format(element.children, newDepth)}`,
   unchanged: (element, spaces) => `${' '.repeat(spaces)}${element.key}: ${stringify(element.value, spaces)}`,
   changed: (element, spaces) => [`${' '.repeat(spaces - 2)}+ ${element.key}: ${stringify(element.newValue, spaces)}`,
     `${' '.repeat(spaces - 2)}- ${element.key}: ${stringify(element.oldValue, spaces)}`],
